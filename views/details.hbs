@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Doko Online Store</title>
+    <link rel="stylesheet" href="static/css/details.css" />
+  </head>
+  <body>
+    <section class="product">
+        {{#each singleProduct}}
+      <div class="product__photo">
+        <div class="photo-container">
+          <div class="photo-main">
+            <div class="controls">
+              <i cla.idss="material-icons">share</i>
+              <i class="material-icons">favorite_border</i>
+            </div>
+            
+            <img src="{{image}}" alt="green apple slice" />
+            
+          </div>
+          
+        </div>
+      </div>
+      <div class="product__info">
+        <div class="title">
+          <h3>{{title}}</h3>
+          <span>ID:{{id}}</span>
+        </div>
+        <div class="price">
+          $
+          <span>{{price}}</span>
+        </div>
+        <div class="description">
+          <h3>Details</h3>
+          <ul>
+            <li>{{description}}</li>
+          </ul>
+        </div>
+        <button class="buy--btn">ADD TO CART</button>
+      </div>
+      {{/each}}
+    </section>
+  </body>
+</html>
